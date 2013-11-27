@@ -5,21 +5,25 @@ import com.vaadin.ui.Button;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.UI;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
+
 import ru.xpoft.vaadin.VaadinMessageSource;
 
 import javax.annotation.PostConstruct;
+
 import java.util.Locale;
 
 /**
  * @author xpoft
  */
 @Component
-@Scope("prototype")
+@Scope(value="prototype", proxyMode=ScopedProxyMode.TARGET_CLASS)
 public class ChooseLanguage extends Panel
 {
     private static Logger logger = LoggerFactory.getLogger(ChooseLanguage.class);

@@ -1,3 +1,8 @@
+.project
+.classpath
+.settings/
+.springBeans
+LOG_FILE_IS_UNDEFINED
 /.idea/libraries
 /.idea/workspace.xml
 /parent/target
